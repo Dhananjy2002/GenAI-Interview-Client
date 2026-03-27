@@ -5,11 +5,11 @@ const AboutUs = () => {
         <div className="min-h-screen bg-slate-50 py-16 px-4 sm:px-6 lg:px-8 font-sans">
             <div className="max-w-4xl mx-auto">
                 <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
-                    <div className="h-48 bg-indigo-600 flex flex-col items-center justify-center gap-4">
-                        <div className="w-24 h-24 flex items-center justify-center overflow-hidden">
+                    <div className="h-56 bg-linear-to-br from-indigo-600 to-indigo-800 flex flex-col items-center justify-center gap-4">
+                        <div className="bg-white rounded-2xl shadow-2xl p-3 w-24 h-24 flex items-center justify-center overflow-hidden">
                             <img src="/logo.png?v=2" alt="Interview Master Logo" className="w-full h-full object-contain" />
                         </div>
-                        <h1 className="text-4xl font-extrabold text-white tracking-tight">About Interview Master</h1>
+                        <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight drop-shadow-md">About Interview Master</h1>
                     </div>
                     <div className="p-8 sm:p-12 space-y-8">
                         <section>
