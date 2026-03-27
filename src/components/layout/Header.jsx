@@ -1,29 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router';
-import { logoutUser } from '../../features/auth/services/auth.api';
+import { useAuth } from '../../features/auth/hooks/useAuth';
 import { toast } from 'react-toastify';
 
 const Header = () => {
     const navigate = useNavigate();
     const location = useLocation();
+    const { user, logout } = useAuth();
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const [user, setUser] = useState(null);
-
-    useEffect(() => {
-        const storedUser = localStorage.getItem('user');
-        if (storedUser) {
-            try {
-                setUser(JSON.parse(storedUser));
-            } catch (e) {
-                console.error("Error parsing user from localStorage", e);
-            }
-        }
-    }, [location]);
 
     const handleLogout = async () => {
         try {
-            await logoutUser();
-            localStorage.removeItem('user');
+            await logout();
             toast.success("Successfully logged out!");
             navigate('/login');
         } catch (error) {
@@ -104,11 +92,11 @@ const Header = () => {
                         {/* User Actions / Menu Toggle */}
                         <div className="flex items-center space-x-2 sm:space-x-4">
                             {user && (
-                                <div className="hidden sm:flex items-center bg-slate-50 px-3 py-1.5 rounded-full border border-slate-100 group">
-                                    <div className="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center text-xs font-bold text-indigo-700 mr-2 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                                <div className="flex items-center bg-slate-50 px-2 sm:px-3 py-1.5 rounded-full border border-slate-100 group">
+                                    <div className="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center text-[10px] sm:text-xs font-bold text-indigo-700 sm:mr-2 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
                                         {(user.username || user.name || 'U')[0].toUpperCase()}
                                     </div>
-                                    <span className="text-xs font-bold text-slate-600">
+                                    <span className="hidden sm:inline text-xs font-bold text-slate-600">
                                         {user.username || user.name || user.email}
                                     </span>
                                 </div>
@@ -117,7 +105,7 @@ const Header = () => {
                             {user && (
                                 <button
                                     onClick={handleLogout}
-                                    className="hidden md:flex items-center px-4 py-2 text-sm font-bold text-red-500 hover:bg-red-50 rounded-xl transition-all duration-200"
+                                    className="hidden sm:flex items-center px-3 sm:px-4 py-2 text-xs sm:text-sm font-bold text-red-500 hover:bg-red-50 rounded-xl transition-all duration-200"
                                 >
                                     Sign out
                                 </button>
@@ -126,7 +114,7 @@ const Header = () => {
                             {/* Mobile menu button */}
                             <button
                                 onClick={toggleSidebar}
-                                className="md:hidden p-2 rounded-xl text-slate-600 hover:bg-slate-100 focus:outline-none transition-colors"
+                                className="md:hidden p-1.5 sm:p-2 rounded-xl text-slate-600 hover:bg-slate-100 focus:outline-none transition-colors"
                             >
                                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
