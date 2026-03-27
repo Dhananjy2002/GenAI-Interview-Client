@@ -76,7 +76,7 @@ const Home = () => {
     return (
         <div className="min-h-screen bg-linear-to-br from-slate-50 to-indigo-50 font-sans py-8 px-4 sm:px-6 lg:px-8">
             {/* Header / Nav */}
-            <div className="max-w-4xl mx-auto flex justify-between items-center mb-10 bg-white/70 backdrop-blur-md p-4 rounded-2xl shadow-sm border border-white">
+            <div className="max-w-4xl mx-auto flex flex-wrap justify-between items-center mb-10 bg-white/70 backdrop-blur-md p-4 rounded-2xl shadow-sm border border-white gap-3">
                 <div
                     className="flex items-center space-x-3 cursor-pointer group"
                     onClick={() => navigate('/')}
@@ -88,7 +88,7 @@ const Home = () => {
                     </div>
                     <h1 className="text-xl font-bold text-slate-800 tracking-tight group-hover:text-indigo-600 transition-colors">Interview Master</h1>
                 </div>
-                <div className="flex items-center space-x-5">
+                <div className="flex items-center flex-wrap gap-3">
                     <span className="text-sm font-semibold text-slate-600 bg-slate-100 px-3 py-1.5 rounded-full">
                         {user ? user.username || user.name || user.email : "Guest"}
                     </span>
