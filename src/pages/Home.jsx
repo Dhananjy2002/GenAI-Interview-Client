@@ -77,7 +77,7 @@ const Home = () => {
         <div className="min-h-screen bg-linear-to-br from-slate-50 to-indigo-50 font-sans py-8 px-4 sm:px-6 lg:px-8">
             {/* Header / Nav */}
             <div className="max-w-4xl mx-auto flex justify-between items-center mb-10 bg-white/70 backdrop-blur-md p-4 rounded-2xl shadow-sm border border-white">
-                <div 
+                <div
                     className="flex items-center space-x-3 cursor-pointer group"
                     onClick={() => navigate('/')}
                 >
@@ -118,11 +118,11 @@ const Home = () => {
                     {/* Form Header */}
                     <div className="px-8 py-8 bg-linear-to-r from-indigo-600 to-violet-600 border-b border-indigo-700">
                         <h2 className="text-2xl font-extrabold text-white tracking-tight">
-                            {reportId ? "Update Analysis" : "Generate Interview Report"}
+                            {reportId ? "Re-Generate Analysis" : "Generate Interview Report"}
                         </h2>
                         <p className="mt-2 text-indigo-100 text-sm font-medium">
-                            {reportId 
-                                ? "Re-upload your resume to refine this existing analysis." 
+                            {reportId
+                                ? "Re-upload your resume to refine this existing analysis."
                                 : "Upload your resume and the job description. Our AI will analyze the gap and construct a personalized roadmap."
                             }
                         </p>
@@ -213,7 +213,7 @@ const Home = () => {
                                             {reportId ? 'Updating...' : 'Generating Analysis...'}
                                         </>
                                     ) : (
-                                        reportId ? 'Update Report ⚡' : 'Generate My Report ✨'
+                                        reportId ? 'Re-Generate Report ⚡' : 'Generate My Report ✨'
                                     )}
                                 </button>
                             </div>
