@@ -37,9 +37,7 @@ const InterviewReport = () => {
     const { technicalQuestions, behavioralQuestions, skillGaps, preparationPlan, matchScore, title } = report;
 
     return (
-        <div className="min-h-screen bg-linear-to-br from-slate-50 to-indigo-50 font-sans">
-            <NavigationBar title={title} />
-
+        <div className="min-h-screen bg-slate-50 font-sans">
             <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row py-8 gap-6 px-4 sm:px-8">
                 {/* Left Sidebar */}
                 <SectionsNav activeSection={activeSection} setActiveSection={setActiveSection} />

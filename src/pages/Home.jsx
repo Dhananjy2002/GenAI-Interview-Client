@@ -74,43 +74,8 @@ const Home = () => {
     };
 
     return (
-        <div className="min-h-screen bg-linear-to-br from-slate-50 to-indigo-50 font-sans py-8 px-4 sm:px-6 lg:px-8">
-            {/* Header / Nav */}
-            <div className="max-w-4xl mx-auto flex flex-wrap justify-between items-center mb-10 bg-white/70 backdrop-blur-md p-4 rounded-2xl shadow-sm border border-white gap-3">
-                <div
-                    className="flex items-center space-x-3 cursor-pointer group"
-                    onClick={() => navigate('/')}
-                >
-                    <div className="bg-indigo-600 p-2.5 rounded-xl shadow-md shadow-indigo-100 group-hover:scale-105 transition-transform">
-                        <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
-                    </div>
-                    <h1 className="text-xl font-bold text-slate-800 tracking-tight group-hover:text-indigo-600 transition-colors">Interview Master</h1>
-                </div>
-                <div className="flex items-center flex-wrap gap-3">
-                    <span className="text-sm font-semibold text-slate-600 bg-slate-100 px-3 py-1.5 rounded-full">
-                        {user ? user.username || user.name || user.email : "Guest"}
-                    </span>
-                    <button
-                        onClick={() => navigate('/reports')}
-                        className="text-sm font-bold text-indigo-600 hover:text-indigo-800 transition-colors flex items-center gap-2 group"
-                    >
-                        <div className="p-1.5 rounded-lg bg-indigo-50 group-hover:bg-indigo-100 transition-colors">
-                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                            </svg>
-                        </div>
-                        My Reports
-                    </button>
-                    <button
-                        onClick={handleLogout}
-                        className="text-sm font-bold text-red-500 hover:text-red-700 transition-colors"
-                    >
-                        Sign out
-                    </button>
-                </div>
-            </div>
+        <div className="py-8 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            {/* Header removed and moved to AppLayout */}
 
             {/* Main Content Area */}
             <div className="max-w-4xl mx-auto">
