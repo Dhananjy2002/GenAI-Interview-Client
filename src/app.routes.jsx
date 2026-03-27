@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import Protected from "./features/auth/components/Protected";
 import InterviewReport from "./features/ai/components/InterviewReport";
 import ReportsList from "./features/ai/components/ReportsList";
+import ForgotPassword from "./features/auth/pages/ForgotPassword";
+import ResetPassword from "./features/auth/pages/ResetPassword";
 
 export const router = createBrowserRouter([
     {
@@ -30,5 +32,13 @@ export const router = createBrowserRouter([
     {
         path: "/register",
         element: <Register />,
+    },
+    {
+        path: "/forgot-password",
+        element: <ForgotPassword />,
+    },
+    {
+        path: "/reset-password/:token",
+        element: <ResetPassword />,
     },
 ])
