@@ -63,7 +63,7 @@ const Header = () => {
                             onClick={() => navigate('/')}
                         >
                             <div className="bg-white p-1 rounded-xl shadow-lg border border-slate-100 group-hover:scale-110 transition-all duration-300 transform-gpu group-active:scale-95 overflow-hidden w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
-                                <img src="/logo.png" alt="Interview Master" className="w-full h-full object-contain" />
+                                <img src="/logo.png?v=2" alt="Interview Master" className="w-full h-full object-contain" />
                             </div>
                             <span className="text-lg sm:text-xl font-extrabold text-slate-800 tracking-tight transition-colors group-hover:text-indigo-600">
                                 Interview Master
@@ -139,7 +139,7 @@ const Header = () => {
                     <div className="flex items-center justify-between p-6 border-b border-slate-100">
                         <div className="flex items-center space-x-3">
                             <div className="bg-white p-1 rounded-lg shadow-lg border border-slate-100 w-8 h-8 flex items-center justify-center overflow-hidden">
-                                <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
+                                <img src="/logo.png?v=2" alt="Logo" className="w-full h-full object-contain" />
                             </div>
                             <span className="text-lg font-bold text-slate-800">Menu</span>
                         </div>

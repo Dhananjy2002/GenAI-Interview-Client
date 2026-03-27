@@ -45,7 +45,7 @@ const Register = () => {
             <div className="sm:mx-auto sm:w-full sm:max-w-md">
                 <div className="flex justify-center">
                     <div className="bg-white p-1 rounded-2xl shadow-xl border border-slate-100 w-16 h-16 flex items-center justify-center overflow-hidden">
-                        <img src="/logo.png" alt="Interview Master" className="w-full h-full object-contain" />
+                        <img src="/logo.png?v=2" alt="Interview Master" className="w-full h-full object-contain" />
                     </div>
                 </div>
                 <h2 className="mt-6 text-center text-3xl font-extrabold text-slate-900 tracking-tight">
