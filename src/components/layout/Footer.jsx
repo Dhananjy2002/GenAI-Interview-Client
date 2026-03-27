@@ -23,8 +23,8 @@ const Footer = () => {
         {
             title: 'Support',
             links: [
-                { name: 'Help Center', path: '#' },
-                { name: 'Contact Us', path: '#' },
+                { name: 'Help Center', path: '/help' },
+                { name: 'Contact Us', path: '/contact' },
             ]
         }
     ];

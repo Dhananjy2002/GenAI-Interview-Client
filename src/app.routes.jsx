@@ -11,6 +11,8 @@ import AppLayout from "./components/layout/AppLayout";
 import AboutUs from "./pages/AboutUs";
 import Terms from "./pages/Terms";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import ContactUs from "./pages/ContactUs";
+import HelpCenter from "./pages/HelpCenter";
 
 const withLayout = (Component) => (
     <AppLayout>
@@ -46,6 +48,14 @@ export const router = createBrowserRouter([
     {
         path: "/privacy",
         element: withLayout(<PrivacyPolicy />)
+    },
+    {
+        path: "/contact",
+        element: withLayout(<ContactUs />)
+    },
+    {
+        path: "/help",
+        element: withLayout(<HelpCenter />)
     },
     {
         path: "/login",

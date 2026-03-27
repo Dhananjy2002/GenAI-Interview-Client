@@ -91,3 +91,13 @@ export async function resetPasswordApi({ token, password }) {
         throw error;
     }
 }
+
+export async function contactUsApi(data) {
+    try {
+        const response = await api.post(`/contact`, data);
+        return response.data;
+    } catch (error) {
+        console.log("Error in contactUsApi:", error);
+        throw error;
+    }
+}
