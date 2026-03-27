@@ -6,7 +6,7 @@ const AboutUs = () => {
             <div className="max-w-4xl mx-auto">
                 <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
                     <div className="h-48 bg-indigo-600 flex flex-col items-center justify-center gap-4">
-                        <div className="bg-white p-1 rounded-2xl shadow-xl w-16 h-16 flex items-center justify-center overflow-hidden">
+                        <div className="w-24 h-24 flex items-center justify-center overflow-hidden">
                             <img src="/logo.png?v=2" alt="Interview Master Logo" className="w-full h-full object-contain" />
                         </div>
                         <h1 className="text-4xl font-extrabold text-white tracking-tight">About Interview Master</h1>

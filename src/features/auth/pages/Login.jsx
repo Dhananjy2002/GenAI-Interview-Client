@@ -40,8 +40,8 @@ const Login = () => {
     return (
         <div className="min-h-screen bg-linear-to-br from-slate-50 to-indigo-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8 font-sans">
             <div className="sm:mx-auto sm:w-full sm:max-w-md">
-                <div className="flex justify-center">
-                    <div className="bg-white p-1 rounded-2xl shadow-xl border border-slate-100 w-16 h-16 flex items-center justify-center overflow-hidden">
+                <div className="flex justify-center mb-6">
+                    <div className="w-24 h-24 flex items-center justify-center overflow-hidden">
                         <img src="/logo.png?v=2" alt="Interview Master" className="w-full h-full object-contain" />
                     </div>
                 </div>
