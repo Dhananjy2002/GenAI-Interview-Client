@@ -62,10 +62,8 @@ const Header = () => {
                             className="flex items-center space-x-3 cursor-pointer group"
                             onClick={() => navigate('/')}
                         >
-                            <div className="bg-indigo-600 p-2 sm:p-2.5 rounded-xl shadow-lg shadow-indigo-100 group-hover:scale-105 transition-all duration-300 transform-gpu group-active:scale-95">
-                                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                </svg>
+                            <div className="bg-white p-1 rounded-xl shadow-lg border border-slate-100 group-hover:scale-110 transition-all duration-300 transform-gpu group-active:scale-95 overflow-hidden w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
+                                <img src="/logo.png" alt="Interview Master" className="w-full h-full object-contain" />
                             </div>
                             <span className="text-lg sm:text-xl font-extrabold text-slate-800 tracking-tight transition-colors group-hover:text-indigo-600">
                                 Interview Master
@@ -140,10 +138,8 @@ const Header = () => {
                     {/* Sidebar Header */}
                     <div className="flex items-center justify-between p-6 border-b border-slate-100">
                         <div className="flex items-center space-x-3">
-                            <div className="bg-indigo-600 p-2 rounded-lg shadow-lg shadow-indigo-100">
-                                <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                </svg>
+                            <div className="bg-white p-1 rounded-lg shadow-lg border border-slate-100 w-8 h-8 flex items-center justify-center overflow-hidden">
+                                <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
                             </div>
                             <span className="text-lg font-bold text-slate-800">Menu</span>
                         </div>
