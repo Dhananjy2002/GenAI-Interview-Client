@@ -101,6 +101,7 @@ const ResetPassword = () => {
                                     value={confirmPassword}
                                     type={showPassword ? "text" : "password"}
                                     onChange={(e) => setConfirmPassword(e.target.value)}
+                                    onPaste={(e) => e.preventDefault()}
                                     autoComplete="new-password"
                                     required
                                     className="appearance-none block w-full px-4 py-3 border border-slate-200 rounded-xl shadow-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition-shadow bg-white/50 focus:bg-white"
